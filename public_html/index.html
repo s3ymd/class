@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>クラスの操作</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .aqua {
+                background-color: aqua;
+            }
+        </style>
+
+    </head>
+    <body>
+        <input type="button" id="addClass" value="クラス「aqua」を追加">
+        <input type="button" id="removeClass" value="クラス「aqua」を削除">
+        <input type="button" id="toggleClass" value="クラス「aqua」をトグル">
+        <input type="button" id="hasClass" value="クラス「aqua」を持つか確認">
+        <hr>
+        <div>jQuery</div>
+
+        <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("#addClass").click(function () {
+                    $("div").addClass("aqua");
+                });
+                $("#removeClass").click(function () {
+                    $("div").removeClass("aqua");
+                });
+                $("#toggleClass").click(function () {
+                    $("div").toggleClass("aqua");
+                });
+                $("#hasClass").click(function () {
+                    alert($("div").hasClass("aqua"));
+                });
+            });
+        </script>
+    </body>
+</html>
